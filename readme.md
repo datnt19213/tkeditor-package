@@ -1,7 +1,7 @@
 
-# TEditor - Advanced Rich Text Editor
+# TKEditor - Advanced Rich Text Editor
 
-TEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
+TKEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
 
 #### **[Demo](https://playground.platejs.org)**
 
@@ -32,9 +32,9 @@ TEditor is a powerful and extensible rich text editor built with Next.js, Plate.
 
 1.  **Install the package:**
     ```bash
-    npm install teditor
+    npm install tkeditor
     # or
-    yarn add teditor
+    yarn add tkeditor
     ```
 3.  **Set up environment variables:**
     Create a `.env.local` file in the root of the project and add your API keys:
@@ -68,7 +68,7 @@ TEditor is a powerful and extensible rich text editor built with Next.js, Plate.
     ```css
     @config  "path_to_your_config_tailwindcss_file"
     /*or*/
-    @source "./node_modules/teditor/**/*.{js,ts,jsx,tsx}"
+    @source "./node_modules/tkeditor/**/*.{js,ts,jsx,tsx}"
 
     /* example: @config "../tailwind.config.js" #for vite react */
     /* or use link to index if use simple React base 
@@ -79,7 +79,7 @@ TEditor is a powerful and extensible rich text editor built with Next.js, Plate.
     Add needed packages to your `tailwind.config.js` file:
     ```ts
     {
-    content: ["./node_modules/teditor/**/*.{js,ts,jsx,tsx}"],
+    content: ["./node_modules/tkeditor/**/*.{js,ts,jsx,tsx}"],
     theme: {
     // ...
     },
@@ -91,9 +91,9 @@ TEditor is a powerful and extensible rich text editor built with Next.js, Plate.
 
     ```
 
-## `TEditor` Component Props
+## `TKEditor` Component Props
 
-The main editor component, `TEditor` (defined in `components/editor/plate-editor.tsx`), can be customized using the following props:
+The main editor component, `TKEditor` (defined in `components/editor/plate-editor.tsx`), can be customized using the following props:
 
 | Prop              | Type                                                  | Default                                  | Description                                                                                                |
 | ----------------- | ----------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -114,7 +114,7 @@ The main editor component, `TEditor` (defined in `components/editor/plate-editor
 | `override`        | `Record<string, any>`                                 | `{}`                                     | Allows overriding other editor settings.                                                                   |
 | `placeholders`    | `boolean`                                             | `undefined`                              | Enables or disables media placeholders (configured in `useCreateEditor`).                                  |
 
-Refer to `components/editor/plate-editor.tsx` for the `TEditorProps` type definition and `components/editor/use-create-editor.ts` for how these props influence the editor's setup. The `PLUGIN_KEY` type in `use-create-editor.ts` lists all available keys for the `allowPlugins` prop.
+Refer to `components/editor/plate-editor.tsx` for the `TKEditorProps` type definition and `components/editor/use-create-editor.ts` for how these props influence the editor's setup. The `PLUGIN_KEY` type in `use-create-editor.ts` lists all available keys for the `allowPlugins` prop.
 
 ## Project Structure
 
@@ -126,7 +126,7 @@ The project is organized into the following main directories:
     -   `app/api/ai/copilot/route.ts`: API route for AI copilot functionality.
     -   `app/api/uploadthing/route.ts`: API route for Uploadthing file uploads.
 -   **`components/`**: Reusable React components.
-    -   `components/editor/plate-editor.tsx`: The core `TEditor` component.
+    -   `components/editor/plate-editor.tsx`: The core `TKEditor` component.
     -   `components/editor/plugins/`: Contains all Plate.js plugin configurations.
     -   `components/editor/use-create-editor.ts`: Hook for creating and configuring the Plate editor instance.
     -   `components/ui/`: UI components, many from shadcn/ui, customized for the editor.

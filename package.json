@@ -1,5 +1,5 @@
 {
- "name": "teditor",
+ "name": "tkeditor",
  "description": "TEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.",
  "version": "1.0.0",
  "license": "MIT",
@@ -24,7 +24,7 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/datnt19213/teditor.git"
+  "url": "git+https://github.com/datnt19213/tkeditor.git"
  },
  "peerDependencies": {
   "clsx": "^2.0.0",
@@ -156,11 +156,11 @@
   "react-text-editor-plugin",
   "react-text-editor-plugins",
   "react-text-editor-ui",
-  "teditor",
-  "teditor-react",
-  "teditor-react-component",
-  "teditor-react-library",
-  "teditor-react-plugin",
+  "tkeditor",
+  "tkeditor-react",
+  "tkeditor-react-component",
+  "tkeditor-react-library",
+  "tkeditor-react-plugin",
   "react editor",
   "react editor component",
   "react mordern editor",
@@ -169,7 +169,7 @@
   "medium like editor"
  ],
  "bugs": {
-  "url": "https://github.com/datnt19213/teditor/issues"
+  "url": "https://github.com/datnt19213/tkeditor/issues"
  },
- "homepage": "https://github.com/datnt19213/teditor#readme"
+ "homepage": "https://github.com/datnt19213/tkeditor#readme"
 }
