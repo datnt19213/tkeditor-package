@@ -62,6 +62,35 @@ TEditor is a powerful and extensible rich text editor built with Next.js, Plate.
     -   `/api/ai/copilot` - AI copilot API route.
     -   `/api/uploadthing` - Uploadthing API route for file uploads.
 
+5.  **Styling and Customization:**
+    If you use tailwindcss >=v4.0 use this in init css file in project:
+
+    ```css
+    @config  "path_to_your_config_tailwindcss_file"
+    /*or*/
+    @source "./node_modules/teditor/**/*.{js,ts,jsx,tsx}"
+
+    /* example: @config "../tailwind.config.js" #for vite react */
+    /* or use link to index if use simple React base 
+    <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    (this maybe difference, should check on tailwindcss official website) */
+    ```
+    ---
+    Add needed packages to your `tailwind.config.js` file:
+    ```ts
+    {
+    content: ["./node_modules/teditor/**/*.{js,ts,jsx,tsx}"],
+    theme: {
+    // ...
+    },
+    variants: {
+    // ...
+    },
+    plugins: [],
+    };
+
+    ```
+
 ## `TEditor` Component Props
 
 The main editor component, `TEditor` (defined in `components/editor/plate-editor.tsx`), can be customized using the following props:
