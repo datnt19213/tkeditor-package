@@ -3,7 +3,7 @@
 import { ExitBreakPlugin } from '@udecode/plate-break/react';
 import { HEADING_LEVELS } from '@udecode/plate-heading';
 
-export const exitBreakPlugin = ExitBreakPlugin.configure({
+export const exitBreakPlugin:any = ExitBreakPlugin.configure({
   options: {
     rules: [
       {

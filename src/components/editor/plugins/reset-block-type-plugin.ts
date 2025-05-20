@@ -16,7 +16,7 @@ import {
 import { ResetNodePlugin } from '@udecode/plate-reset-node/react';
 import { ParagraphPlugin } from '@udecode/plate/react';
 
-export const resetBlockTypesCommonRule = {
+export const resetBlockTypesCommonRule:any = {
   defaultType: ParagraphPlugin.key,
   types: [
     ...HEADING_LEVELS,
@@ -28,13 +28,13 @@ export const resetBlockTypesCommonRule = {
   ],
 };
 
-export const resetBlockTypesCodeBlockRule = {
+export const resetBlockTypesCodeBlockRule:any = {
   defaultType: ParagraphPlugin.key,
   types: [CodeBlockPlugin.key],
   onReset: unwrapCodeBlock,
 };
 
-export const resetBlockTypePlugin = ResetNodePlugin.configure({
+export const resetBlockTypePlugin:any = ResetNodePlugin.configure({
   options: {
     rules: [
       {

@@ -10,10 +10,10 @@ import {
   VideoPlugin,
 } from '@udecode/plate-media/react';
 
-import { ImagePreview } from '../../ui/image-preview';
-import { MediaUploadToast } from '../../ui/media-upload-toast';
+import { ImagePreview } from '../ui/image-preview';
+import { MediaUploadToast } from '../ui/media-upload-toast';
 
-export const mediaPlugins = [
+export const mediaPlugins:any[] = [
   ImagePlugin.extend({
     options: { disableUploadInsert: true },
     render: { afterEditable: ImagePreview },

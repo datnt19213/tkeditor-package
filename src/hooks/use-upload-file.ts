@@ -9,10 +9,11 @@ import { z } from 'zod';
 
 import { generateReactHelpers } from '@uploadthing/react';
 
-import type { OurFileRouter } from '../lib/uploadthing';
+import type { OurFileRouter } from '../libs/uploadthing';
 
 export type UploadedFile<T = unknown> = ClientUploadedFileData<T>;
 
+export type UploadMode = 'toCloud' | 'toServer';
 export interface UseUploadFileProps
   extends Pick<
     UploadFilesOptions<OurFileRouter['editorUploader']>,
@@ -20,11 +21,13 @@ export interface UseUploadFileProps
   > {
   onUploadComplete?: (file: UploadedFile) => void;
   onUploadError?: (error: unknown) => void;
+  mode?: UploadMode; 
 }
 
 export function useUploadFile({
   onUploadComplete,
   onUploadError,
+  mode = 'toCloud',
   ...props
 }: UseUploadFileProps = {}) {
   const [uploadedFile, setUploadedFile] = React.useState<UploadedFile>();
@@ -40,7 +43,7 @@ export function useUploadFile({
       const res = await uploadFiles('editorUploader', {
         ...props,
         files: [file],
-        onUploadProgress: ({ progress }) => {
+        onUploadProgress: ({ progress }: { progress: any }) => {
           setProgress(Math.min(progress, 100));
         },
       });
@@ -96,17 +99,64 @@ export function useUploadFile({
     }
   }
 
+  async function uploadThingServer(file: File) {
+  setIsUploading(true);
+  setUploadingFile(file);
+
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const res = await fetch('/api/upload', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!res.ok) {
+      throw new Error('Upload failed');
+    }
+
+    const data = await res.json();
+
+    const uploaded: UploadedFile = {
+      key: data.id || file.name,
+      appUrl: data.url,
+      name: file.name,
+      size: file.size,
+      type: file.type,
+      url: data.url,
+      fileHash: data.fileHash,
+      ufsUrl: data.ufsUrl,
+      lastModified: file.lastModified,
+      customId: data.customId,
+      serverData: data.serverData,
+    };
+
+    setUploadedFile(uploaded);
+    onUploadComplete?.(uploaded);
+    return uploaded;
+  } catch (error) {
+    const errorMessage = getErrorMessage(error);
+    toast.error(errorMessage || 'Upload failed');
+    onUploadError?.(error);
+  } finally {
+    setProgress(0);
+    setIsUploading(false);
+    setUploadingFile(undefined);
+  }
+}
+
   return {
     isUploading,
     progress,
     uploadedFile,
-    uploadFile: uploadThing,
+    uploadFile: mode === "toCloud" ? uploadThing : uploadThingServer,
     uploadingFile,
   };
 }
 
 export const { uploadFiles, useUploadThing } =
-  generateReactHelpers<OurFileRouter>();
+  generateReactHelpers<OurFileRouter>() as any;
 
 export function getErrorMessage(err: unknown) {
   const unknownError = 'Something went wrong, please try again later.';

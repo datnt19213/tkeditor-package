@@ -9,7 +9,7 @@ import {
   TableCellPlugin,
 } from '@udecode/plate-table/react';
 
-export const softBreakPlugin = SoftBreakPlugin.configure({
+export const softBreakPlugin:any = SoftBreakPlugin.configure({
   options: {
     rules: [
       { hotkey: 'shift+enter' },

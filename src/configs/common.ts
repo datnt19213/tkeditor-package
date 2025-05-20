@@ -1,4 +1,4 @@
-import { Model } from '../components/editor/settings';
+import { Model } from '../components/editor/core/settings';
 
 export const models: Model[] = [
   { label: 'gpt-4o-mini', value: 'gpt-4o-mini' },

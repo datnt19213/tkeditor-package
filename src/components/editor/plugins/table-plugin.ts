@@ -2,6 +2,6 @@
 
 import { TablePlugin } from '@udecode/plate-table/react';
 
-export const tablePlugin = TablePlugin.configure({
+export const tablePlugin:any = TablePlugin.configure({
   options: {},
 });

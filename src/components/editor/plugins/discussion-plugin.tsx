@@ -2,8 +2,8 @@
 
 import { createPlatePlugin } from '@udecode/plate/react';
 
-import { BlockDiscussion } from '../../ui/block-discussion';
-import type { TComment } from '../../ui/comment';
+import { BlockDiscussion } from '../ui/block-discussion';
+import type { TComment } from '../ui/comment';
 
 export interface TDiscussion {
   id: string;
@@ -215,7 +215,7 @@ export const discussionsData: TDiscussion[] = [
   },
 ];
 
-export const avatarUrl = (seed: string) =>
+export const avatarUrl:any = (seed: string) =>
   `https://api.dicebear.com/9.x/glass/svg?seed=${seed}`;
 
 const usersData: Record<
@@ -240,7 +240,7 @@ const usersData: Record<
 };
 
 // This plugin is purely UI. It's only used to store the discussions and users data
-export const discussionPlugin = createPlatePlugin({
+export const discussionPlugin:any = createPlatePlugin({
   key: 'discussion',
   options: {
     currentUserId: 'alice',

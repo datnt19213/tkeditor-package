@@ -2,10 +2,10 @@
 
 import {
   type ExtendConfig,
-  type Path,
   isSlateEditor,
   isSlateElement,
   isSlateString,
+  type Path,
 } from '@udecode/plate';
 import {
   type BaseSuggestionConfig,
@@ -13,8 +13,8 @@ import {
 } from '@udecode/plate-suggestion';
 import { toTPlatePlugin } from '@udecode/plate/react';
 
-import { discussionPlugin } from '../../../components/editor/plugins/discussion-plugin';
-import { BlockSuggestion } from '../../../components/ui/block-suggestion';
+import { discussionPlugin } from '../plugins/discussion-plugin';
+import { BlockSuggestion } from '../ui/block-suggestion';
 
 export type SuggestionConfig = ExtendConfig<
   BaseSuggestionConfig,
@@ -25,7 +25,7 @@ export type SuggestionConfig = ExtendConfig<
   }
 >;
 
-export const suggestionPlugin = toTPlatePlugin<SuggestionConfig>(
+export const suggestionPlugin:any = toTPlatePlugin<SuggestionConfig>(
   BaseSuggestionPlugin,
   ({ editor }) => ({
     handlers: {

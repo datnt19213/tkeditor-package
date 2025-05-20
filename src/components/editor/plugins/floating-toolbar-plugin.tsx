@@ -2,11 +2,11 @@
 
 import { createPlatePlugin } from '@udecode/plate/react';
 
-import { FloatingToolbar } from '../../ui/floating-toolbar';
-import { FloatingToolbarButtons } from '../../ui/floating-toolbar-buttons';
-import { PLUGIN_KEY } from '../use-create-editor';
+import { PLUGIN_KEY } from '../core/use-create-editor';
+import { FloatingToolbar } from '../ui/floating-toolbar';
+import { FloatingToolbarButtons } from '../ui/floating-toolbar-buttons';
 
-export const FloatingToolbarPlugin =  ({allows, classes}:{allows:PLUGIN_KEY[], classes?:{className?:string, groupClass?:string}}) => { return createPlatePlugin({
+export const FloatingToolbarPlugin:any =  ({allows, classes}:{allows:PLUGIN_KEY[], classes?:{className?:string, groupClass?:string}}) => { return createPlatePlugin({
   key: 'floating-toolbar',
   render: {
     afterEditable: () => (

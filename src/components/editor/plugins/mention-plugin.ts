@@ -2,6 +2,6 @@
 
 import { MentionPlugin } from '@udecode/plate-mention/react';
 
-export const mentionPlugin = MentionPlugin.configure({
+export const mentionPlugin:any = MentionPlugin.configure({
   options: { triggerPreviousCharPattern: /^$|^[\s"']$/ },
 });

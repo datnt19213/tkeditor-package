@@ -2,11 +2,11 @@
 
 import { createPlatePlugin } from '@udecode/plate/react';
 
-import { FixedToolbar } from '../../ui/fixed-toolbar';
-import { FixedToolbarButtons } from '../../ui/fixed-toolbar-buttons';
-import { PLUGIN_KEY } from '../use-create-editor';
+import { PLUGIN_KEY } from '../core/use-create-editor';
+import { FixedToolbar } from '../ui/fixed-toolbar';
+import { FixedToolbarButtons } from '../ui/fixed-toolbar-buttons';
 
-export const FixedToolbarPlugin = ({allows, classes}:{allows:PLUGIN_KEY[], classes?:{className?:string, groupClass?:string}}) => {
+export const FixedToolbarPlugin:any = ({allows, classes}:{allows:PLUGIN_KEY[], classes?:{className?:string, groupClass?:string}}) => {
   return createPlatePlugin({
   key: 'fixed-toolbar',
   render: {

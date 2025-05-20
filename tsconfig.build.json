@@ -1,0 +1,14 @@
+// tsconfig.build.json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "nodenext", // ✅ sửa lỗi TS6046
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist", // hoặc `dist` nếu bạn muốn cùng thư mục
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}

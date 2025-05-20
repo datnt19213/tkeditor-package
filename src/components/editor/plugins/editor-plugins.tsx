@@ -20,7 +20,6 @@ import { SlashPlugin } from '@udecode/plate-slash-command/react';
 import { TogglePlugin } from '@udecode/plate-toggle/react';
 import { TrailingBlockPlugin } from '@udecode/plate-trailing-block';
 
-import { SuggestionBelowNodes } from '../../ui/suggestion-line-break';
 import { aiPlugins } from './ai-plugins';
 import { alignPlugin } from './align-plugin';
 import { autoformatPlugin } from './autoformat-plugin';
@@ -46,7 +45,7 @@ import { suggestionPlugin } from './suggestion-plugin';
 import { tablePlugin } from './table-plugin';
 import { tocPlugin } from './toc-plugin';
 
-export const viewPlugins = [
+export const viewPlugins:any[] = [
   ...basicNodesPlugins,
   HorizontalRulePlugin,
   linkPlugin,
@@ -76,9 +75,10 @@ export const viewPlugins = [
   // Collaboration
   discussionPlugin,
   commentsPlugin,
-  suggestionPlugin.configure({
-    render: { belowNodes: SuggestionBelowNodes as any },
-  }),
+  // suggestionPlugin.configure({
+  //   render: { belowNodes: SuggestionBelowNodes as any },
+  // }),
+  suggestionPlugin,
 ] as const;
 
 export const editorPlugins = [

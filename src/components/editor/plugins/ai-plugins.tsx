@@ -18,11 +18,11 @@ import { usePluginOption } from '@udecode/plate/react';
 import {
   markdownPlugin,
 } from '../../../components/editor/plugins/markdown-plugin';
-import { AILoadingBar } from '../../../components/ui/ai-loading-bar';
-import { AIMenu } from '../../../components/ui/ai-menu';
+import { AILoadingBar } from '../ui/ai-loading-bar';
+import { AIMenu } from '../ui/ai-menu';
 import { cursorOverlayPlugin } from './cursor-overlay-plugin';
 
-const systemCommon = `\
+const systemCommon:any = `\
 You are an advanced AI-powered note-taking assistant, designed to enhance productivity and creativity in note management.
 Respond directly to user prompts with clear, concise, and relevant content. Maintain a neutral, helpful tone.
 
@@ -38,7 +38,7 @@ Rules:
 - CRITICAL: when asked to write in markdown, do not start with \`\`\`markdown.
 `;
 
-const systemDefault = `\
+const systemDefault:any = `\
 ${systemCommon}
 - <Block> is the current block of text the user is working on.
 - Ensure your output can seamlessly fit into the existing <Block> structure.
@@ -48,7 +48,7 @@ ${systemCommon}
 </Block>
 `;
 
-const systemSelecting = `\
+const systemSelecting:any = `\
 ${systemCommon}
 - <Block> is the block of text containing the user's selection, providing context.
 - Ensure your output can seamlessly fit into the existing <Block> structure.
@@ -62,7 +62,7 @@ ${systemCommon}
 </Selection>
 `;
 
-const systemBlockSelecting = `\
+const systemBlockSelecting:any = `\
 ${systemCommon}
 - <Selection> represents the full blocks of text the user has selected and wants to modify or ask about.
 - Your response should be a direct replacement for the entire <Selection>.
@@ -74,12 +74,12 @@ ${systemCommon}
 `;
 
 // const userDefault = `{prompt}`;
-const userDefault = `<Reminder>
+const userDefault:any = `<Reminder>
 CRITICAL: NEVER write <Block>.
 </Reminder>
 {prompt}`;
 
-const userSelecting = `<Reminder>
+const userSelecting:any = `<Reminder>
 If this is a question, provide a helpful and concise answer about <Selection>.
 If this is an instruction, provide ONLY the text to replace <Selection>. No explanations.
 Ensure it fits seamlessly within <Block>. If <Block> is empty, write ONE random sentence.
@@ -87,7 +87,7 @@ NEVER write <Block> or <Selection>.
 </Reminder>
 {prompt} about <Selection>`;
 
-const userBlockSelecting = `<Reminder>
+const userBlockSelecting:any = `<Reminder>
 If this is a question, provide a helpful and concise answer about <Selection>.
 If this is an instruction, provide ONLY the content to replace the entire <Selection>. No explanations.
 Maintain the overall structure unless instructed otherwise.
@@ -95,7 +95,7 @@ NEVER write <Block> or <Selection>.
 </Reminder>
 {prompt} about <Selection>`;
 
-export const PROMPT_TEMPLATES = {
+export const PROMPT_TEMPLATES:any = {
   systemBlockSelecting,
   systemDefault,
   systemSelecting,

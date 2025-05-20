@@ -8,10 +8,10 @@ import {
   stripMarkdown,
 } from '@udecode/plate-markdown';
 
-import { GhostText } from '../../ui/ghost-text';
+import { GhostText } from '../ui/ghost-text';
 import { markdownPlugin } from './markdown-plugin';
 
-export const copilotPlugins = [
+export const copilotPlugins:any[] = [
   markdownPlugin,
   CopilotPlugin.configure(({ api }) => ({
     options: {

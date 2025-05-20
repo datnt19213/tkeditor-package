@@ -1,7 +1,6 @@
 'use client';
 
 import type { AutoformatRule } from '@udecode/plate-autoformat';
-
 import {
   autoformatArrow,
   autoformatLegal,
@@ -31,7 +30,10 @@ import {
   ListStyleType,
   toggleIndentList,
 } from '@udecode/plate-indent-list';
-import { openNextToggles, TogglePlugin } from '@udecode/plate-toggle/react';
+import {
+  openNextToggles,
+  TogglePlugin,
+} from '@udecode/plate-toggle/react';
 import { ParagraphPlugin } from '@udecode/plate/react';
 
 const autoformatMarks: AutoformatRule[] = [
@@ -227,7 +229,7 @@ const autoformatIndentLists: AutoformatRule[] = [
   },
 ];
 
-export const autoformatPlugin = AutoformatPlugin.configure({
+export const autoformatPlugin:any = AutoformatPlugin.configure({
   options: {
     enableUndoOnDelete: true,
     rules: [

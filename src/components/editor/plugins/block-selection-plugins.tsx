@@ -2,9 +2,9 @@
 
 import { BlockSelectionPlugin } from '@udecode/plate-selection/react';
 
-import { BlockSelection } from '../../ui/block-selection';
+import { BlockSelection } from '../ui/block-selection';
 
-export const blockSelectionPlugins = [
+export const blockSelectionPlugins:any[] = [
   BlockSelectionPlugin.configure(({ editor }) => ({
     options: {
       enableContextMenu: true,
@@ -26,7 +26,7 @@ export const blockSelectionPlugins = [
   })),
 ] as any;
 
-export const blockSelectionReadOnlyPlugin = BlockSelectionPlugin.configure({
+export const blockSelectionReadOnlyPlugin:any = BlockSelectionPlugin.configure({
   api: {},
   extendEditor: null,
   handlers: {},

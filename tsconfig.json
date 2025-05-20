@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
     "module": "ESNext",
+    "moduleResolution": "b",
+    "lib": ["DOM", "ES2020"],
     "jsx": "react-jsx",
+    "types": ["react", "react-dom"],
+    "resolveJsonModule": false,
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": false,
+    "preserveSymlinks": false,
     "declarationDir": "dist",
     "outDir": "dist",
-    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,7 +20,7 @@
     "noEmit": false,
     "isolatedModules": true,
     "baseUrl": ".",
-    "typeRoots": ["./src/types", "./node_modules/@types"]
+    "typeRoots": ["./src/types", "./node_modules/@types"],
   },
   "include": [
     "src"
