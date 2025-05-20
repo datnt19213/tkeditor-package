@@ -104,20 +104,20 @@ export const PROMPT_TEMPLATES:any = {
   userSelecting,
 };
 
-export const aiPlugins = [
+export const aiPlugins:any[] = [
   cursorOverlayPlugin,
   markdownPlugin,
   AIPlugin,
   AIChatPlugin.configure({
     options: {
-      promptTemplate: ({ isBlockSelecting, isSelecting }) => {
+      promptTemplate: ({ isBlockSelecting, isSelecting }: any) => {
         return isBlockSelecting
           ? PROMPT_TEMPLATES.userBlockSelecting
           : isSelecting
             ? PROMPT_TEMPLATES.userSelecting
             : PROMPT_TEMPLATES.userDefault;
       },
-      systemTemplate: ({ isBlockSelecting, isSelecting }) => {
+      systemTemplate: ({ isBlockSelecting, isSelecting }: any) => {
         return isBlockSelecting
           ? PROMPT_TEMPLATES.systemBlockSelecting
           : isSelecting
@@ -130,14 +130,14 @@ export const aiPlugins = [
       afterEditable: () => <AIMenu />,
     },
   }).extend({
-    useHooks: ({ editor, getOption }) => {
+    useHooks: ({ editor, getOption }: any) => {
       const mode = usePluginOption(
         { key: 'aiChat' } as AIChatPluginConfig,
         'mode'
       );
 
       useChatChunk({
-        onChunk: ({ chunk, isFirst, nodes }) => {
+        onChunk: ({ chunk, isFirst, nodes }: any) => {
           if (isFirst && mode == 'insert') {
             editor.tf.withoutSaving(() => {
               editor.tf.insertNodes(

@@ -1,0 +1,1 @@
+{"version":3,"file":"equation-element-static.d.ts","sourceRoot":"","sources":["../../../../src/components/editor/ui/equation-element-static.tsx"],"names":[],"mappings":"AAIA,OAAO,EAEL,KAAK,iBAAiB,EACvB,MAAM,gBAAgB,CAAC;AACxB,OAAO,EAEL,KAAK,gBAAgB,EACtB,MAAM,qBAAqB,CAAC;AAI7B,wBAAgB,qBAAqB,CACnC,KAAK,EAAE,iBAAiB,CAAC,gBAAgB,CAAC,2CA2C3C"}

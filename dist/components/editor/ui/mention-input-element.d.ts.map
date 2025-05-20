@@ -1,0 +1,1 @@
+{"version":3,"file":"mention-input-element.d.ts","sourceRoot":"","sources":["../../../../src/components/editor/ui/mention-input-element.tsx"],"names":[],"mappings":"AAIA,OAAO,KAAK,EAAE,oBAAoB,EAAE,MAAM,wBAAwB,CAAC;AAEnE,OAAO,KAAK,EAAE,iBAAiB,EAAE,MAAM,sBAAsB,CAAC;AAe9D,wBAAgB,mBAAmB,CACjC,KAAK,EAAE,iBAAiB,CAAC,oBAAoB,CAAC,2CAwC/C;AAED,eAAO,MAAM,YAAY;;;GA2ExB,CAAC"}
