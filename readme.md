@@ -3,7 +3,7 @@
 
 TKEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
 
-<p align="center"><img src="https://lh6.googleusercontent.com/BdWi_JE5J-OIaf_1E-uDSsPk9kqeRwAlk6c-dxVXram549JUXzKL4Mqrf5tOCEUuAZ09MT4xNFP2NyHONXMRdjE9lEXouB0JYq29kyrvnaMOyZqb2BnXUcmucZxD9RdAqg=w1280" width='320px' /></>
+<p align="center"><img src="https://lh6.googleusercontent.com/xy_by-BpYf7wKgAJWuMxEGAUFQ2Lo6xX7K4TW1l4jMbblXPuyih9AeKxks350ydbJrSxmw_EP3UgMa2sjKEuaF8IZDT0CB3wbSX-u-Ty4Oaslb3NF03x7Iouwc9Lsoq3MQ=w1280" width='320px' /></>
 
 <p align="center"><a href="https://tkeditor-demo.vercel.app/"><strong>Demo</strong></a></p>
 
