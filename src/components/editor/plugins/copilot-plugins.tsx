@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { faker } from '@faker-js/faker';
 import type { TElement } from '@udecode/plate';

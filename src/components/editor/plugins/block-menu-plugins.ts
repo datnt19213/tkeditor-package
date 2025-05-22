@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { BlockMenuPlugin } from '@udecode/plate-selection/react';
 

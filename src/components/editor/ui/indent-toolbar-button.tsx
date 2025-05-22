@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import { useIndentButton } from '@udecode/plate-indent/react';

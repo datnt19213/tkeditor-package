@@ -1,4 +1,4 @@
-'use client';
+;
 
 import type { PlateEditor } from '@udecode/plate/react';
 

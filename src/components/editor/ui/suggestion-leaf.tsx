@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import type { TSuggestionText } from '@udecode/plate-suggestion';

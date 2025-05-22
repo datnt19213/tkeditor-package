@@ -1,28 +1,32 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
-    "lib": ["DOM", "ES2020"],
-    "jsx": "react-jsx",
-    "types": ["react", "react-dom"],
-    "resolveJsonModule": false,
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": false,
-    "preserveSymlinks": false,
-    "declarationDir": "dist",
-    "outDir": "dist",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "es5",
+    "module": "es6",
+    "sourceMap": true,
+    "rootDir": "src",
     "strict": true,
-    "noEmit": false,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "types": ["react", "react-dom", "node"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "tests"]
 }
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "module": "es6",
+//     "sourceMap": true,
+//     "rootDir": "src",
+//     "strict": true,
+//     "jsx": "react-jsx",
+//     "esModuleInterop": true,
+//     "moduleResolution": "bundler",
+//     "skipLibCheck": true,
+//     "types": ["react", "react-dom", "node"]
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["node_modules", "dist", "tests"]
+// }

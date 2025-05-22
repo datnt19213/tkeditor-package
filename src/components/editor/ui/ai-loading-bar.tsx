@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { Pause } from 'lucide-react';
 

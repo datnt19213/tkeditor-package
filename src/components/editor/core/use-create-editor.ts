@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { withProps } from '@udecode/cn';
 import type { Value } from '@udecode/plate';

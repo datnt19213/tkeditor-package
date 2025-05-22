@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { AlignPlugin } from '@udecode/plate-alignment/react';
 import { HEADING_LEVELS } from '@udecode/plate-heading';

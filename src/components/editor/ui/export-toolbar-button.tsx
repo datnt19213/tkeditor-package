@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import html2canvas from 'html2canvas-pro'; // ✅ Named export
@@ -8,6 +6,8 @@ import {
   createLowlight,
 } from 'lowlight';
 import { ArrowDownToLineIcon } from 'lucide-react';
+import * as PDFLib from 'pdf-lib';
+
 
 import type { DropdownMenuProps } from '@radix-ui/react-dropdown-menu';
 import { withProps } from '@udecode/cn';
@@ -179,8 +179,7 @@ export function ExportToolbarButton(props: DropdownMenuProps) {
 
   const exportToPdf = async () => {
     const canvas = await getCanvas();
-
-    const PDFLib = await import('pdf-lib');
+    
     const pdfDoc = await PDFLib.PDFDocument.create();
     const page = pdfDoc.addPage([canvas.width, canvas.height]);
     const imageEmbed = await pdfDoc.embedPng(canvas.toDataURL('PNG'));

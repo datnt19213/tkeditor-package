@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import {
@@ -368,15 +366,13 @@ export const useResolveSuggestion:any = (
       if (!path || !PathApi.isPath(path)) return;
       if (!PathApi.equals(path, blockPath)) return;
 
-      const entries = [
-        ...editor.api.nodes<TElement | TSuggestionText>({
+      const entries = Array.from(editor.api.nodes<TElement | TSuggestionText>({
           at: [],
           mode: 'all',
           match: (n) =>
             (n[SuggestionPlugin.key] && n[getSuggestionKey(id)]) ||
             api.suggestion.nodeId(n as TElement) === id,
-        }),
-      ];
+        }));
 
       // move line break to the end
       entries.sort(([, path1], [, path2]) => {

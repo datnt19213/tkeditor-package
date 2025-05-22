@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import { useColorInput } from '@udecode/plate-font/react';

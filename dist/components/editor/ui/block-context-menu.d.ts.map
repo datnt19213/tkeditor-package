@@ -1,1 +1,0 @@
-{"version":3,"file":"block-context-menu.d.ts","sourceRoot":"","sources":["../../../../src/components/editor/ui/block-context-menu.tsx"],"names":[],"mappings":"AAEA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AA6B/B,MAAM,MAAM,KAAK,GAAG,OAAO,GAAG,IAAI,CAAC;AAEnC,wBAAgB,gBAAgB,CAAC,EAAE,QAAQ,EAAE,EAAE;IAAE,QAAQ,EAAE,KAAK,CAAC,SAAS,CAAA;CAAE,yTA2K3E"}

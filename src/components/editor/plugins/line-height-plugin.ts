@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { HEADING_LEVELS } from '@udecode/plate-heading';
 import { LineHeightPlugin } from '@udecode/plate-line-height/react';

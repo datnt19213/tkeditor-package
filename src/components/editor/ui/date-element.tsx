@@ -1,4 +1,4 @@
-'use client';
+;
 
 import type { TDateElement } from '@udecode/plate-date';
 import type { PlateElementProps } from '@udecode/plate/react';

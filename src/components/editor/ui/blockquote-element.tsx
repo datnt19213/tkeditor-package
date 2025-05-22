@@ -1,11 +1,11 @@
-'use client';
-
 import {
   PlateElement,
   type PlateElementProps,
 } from '@udecode/plate/react';
 
 import { BlockWithPlus } from '../core/element-wrapper';
+
+;
 
 export function BlockquoteElement(props: PlateElementProps) {
   return (

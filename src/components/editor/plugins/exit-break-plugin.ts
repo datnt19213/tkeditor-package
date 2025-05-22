@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { ExitBreakPlugin } from '@udecode/plate-break/react';
 import { HEADING_LEVELS } from '@udecode/plate-heading';

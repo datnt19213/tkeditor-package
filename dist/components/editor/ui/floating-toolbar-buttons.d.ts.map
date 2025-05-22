@@ -1,1 +1,0 @@
-{"version":3,"file":"floating-toolbar-buttons.d.ts","sourceRoot":"","sources":["../../../../src/components/editor/ui/floating-toolbar-buttons.tsx"],"names":[],"mappings":"AAoBA,OAAO,EAAE,UAAU,EAAE,MAAM,2BAA2B,CAAC;AAavD,wBAAgB,sBAAsB,CAAC,EACtC,MAAM,EACN,UAAU,GACV,EAAE;IACF,MAAM,EAAE,UAAU,EAAE,CAAC;IACrB,UAAU,CAAC,EAAE,MAAM,CAAC;CACpB,2CA+DA"}

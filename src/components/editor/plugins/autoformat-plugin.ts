@@ -1,4 +1,4 @@
-'use client';
+;
 
 import type { AutoformatRule } from '@udecode/plate-autoformat';
 import {

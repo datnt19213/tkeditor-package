@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import { useEditorRef, useEditorSelector } from '@udecode/plate/react';

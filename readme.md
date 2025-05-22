@@ -3,171 +3,192 @@
 
 TKEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
 
-#### **[Demo](https://playground.platejs.org)**
+<p align="center"><img src="https://lh6.googleusercontent.com/BdWi_JE5J-OIaf_1E-uDSsPk9kqeRwAlk6c-dxVXram549JUXzKL4Mqrf5tOCEUuAZ09MT4xNFP2NyHONXMRdjE9lEXouB0JYq29kyrvnaMOyZqb2BnXUcmucZxD9RdAqg=w1280" width='320px' /></>
+
+<p align="center"><a href="https://tkeditor-demo.vercel.app/"><strong>Demo</strong></a></p>
 
 
-## Features
+# TKEditor 📝✨
 
-- **Rich Text Editing**: Powered by [Plate.js](https://platejs.org/), offering a robust and flexible core editor.
-- **AI Integration**:
-    - **AI Command**: Execute AI-powered commands directly within the editor (via `/api/ai/command`).
-    - **AI Copilot**: Get AI-assisted writing and suggestions as you type (via `/api/ai/copilot`).
-- **File Uploads**: Integrated with [Uploadthing](https://uploadthing.com/) for easy and efficient file handling (images, videos, audio, documents - see `lib/uploadthing.ts` and `app/api/uploadthing/route.ts`).
-- **Extensive Plugin System**: A wide array of plugins enhance functionality, including:
-    - Basic text formatting (bold, italic, underline, etc.)
-    - Headings, blockquotes, code blocks (with syntax highlighting via `lowlight`)
-    - Lists (bulleted, numbered, to-do)
-    - Tables, images, video, audio, and file embeds
-    - Mentions, emojis, dates, horizontal rules
-    - Markdown support (import/export, autoformatting)
-    - Drag and Drop (DnD) for media
-    - Comments, suggestions, and discussion features
-    - AI-specific UI elements (`AIMenu`, `AILoadingBar`)
-    - See `components/editor/plugins/editor-plugins.tsx` for a full list.
-- **Settings & Configuration**:
-    - Editor settings dialog for API keys (OpenAI, Uploadthing) and AI model selection (see `components/editor/settings.tsx`).
-    - Centralized configuration for AI models and API keys (see `configs/common.ts`).
+[![NPM Version](https://img.shields.io/npm/v/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
+[![License](https://img.shields.io/npm/l/tkeditor.svg)](https://github.com/datnt19213/tkeditor/blob/main/LICENSE)
+[![NPM Downloads](https://img.shields.io/npm/dm/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
 
-## Usage
+TKEditor is a powerful and scalable feature-rich text editor (rich text editor), built with React, Plate.js, and a modern tech stack. It provides a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
 
-1.  **Install the package:**
-    ```bash
-    npm install tkeditor
-    # or
-    yarn add tkeditor
-    ```
-3.  **Set up environment variables:**
-    Create a `.env.local` file in the root of the project and add your API keys:
-    OPENAI_API_KEY - [Get one here](https://platform.openai.com/account/api-keys)
-    UPLOADTHING_TOKEN - [Get one here](https://uploadthing.com/dashboard)
-    WEBSITE_URL="<YOUR_WEBSITE_URL>"
+**List of contents**
 
-4.  **App Routes to AI content and uploads:**
-    ```bash
-    #structure
-    ~project
-      ├── src
-      │   ├── app
-      │   │   ├── api
-      │   │   │   ├── ai
-      │   │   │   │   ├── command
-      │   │   │   │   │   └── route.ts
-      │   │   │   │   └── copilot
-      │   │   │   │       └── route.ts
-      │   │   │   └── uploadthing
-      │   │   │       └── route.ts
-      ......
-    ```
-    -   `/api/ai/command` - AI command API route.
-    -   `/api/ai/copilot` - AI copilot API route.
-    -   `/api/uploadthing` - Uploadthing API route for file uploads.
+*   [ Features ](#tính-năng-)
+*   [ Installation ](#cài-đặt-)
+*   [ Usage ](#sử-dụng-)
+*   [ TKEditor Props ](#props-của-tkeditor-)
+*   [ Plugins ](#plugins-)
+*   [ Customization ](#tùy-chỉnh-)
+*   [ Contributing ](#đóng-góp-)
+*   [ License ](#giấy-phép-)
 
-5.  **Styling and Customization:**
-    If you use tailwindcss >=v4.0 use this in init css file in project:
+## Features 🚀
 
-    ```css
-    @config  "path_to_your_config_tailwindcss_file"
-    /*or*/
-    @source "./node_modules/tkeditor/**/*.{js,ts,jsx,tsx}"
+*   **Powerful Plate.js Foundation:** Built on Plate.js, providing a solid and high-performance foundation for text editing.
+*   **AI-Powered 🤖:**
+    *   **AI Copilot:** Intelligent real-time text suggestions.
+    *   **AI Chat & Commands:** Interact with AI directly within the editor to generate, modify, or improve content.
+    *   **Custom Prompts:** Ability to define prompt templates to optimize interaction with AI.
+*   **Easy File Uploads ☁️:** Integration with Uploadthing allows for smooth uploading of images, videos, audio, PDFs, and text files.
+*   **Flexible Plugin Architecture 🧩:** Easily extend and customize functionality through a rich plugin system.
+*   **Comprehensive Markdown Support Ⓜ️:** Compose content using Markdown syntax and preview directly.
+*   **Highly Customizable User Interface 🎨:** Uses Tailwind CSS and Radix UI, allowing for flexible interface customization to fit your application.
+*   **Diverse Content Types 🧱:** Supports various block and inline elements:
+    *   Headings (H1-H6)
+    *   Paragraph
+    *   Lists (ordered, unordered, task list)
+    *   Blockquote
+    *   Code Block with syntax highlighting
+    *   Table
+    *   Images, Videos, Audio
+    *   Link
+    *   Mention
+    *   Emoji
+    *   Date
+    *   Horizontal Rule
+    *   Table of Contents
+    *   Callout
+    *   And much more!
+*   **Collaboration Features 🤝:**
+    *   **Comments:** Discuss content directly.
+    *   **Suggestions:** Propose changes and track editing history.
+*   **Optimized for Developers ✨:**
+    *   Written in TypeScript.
+    *   Easy integration into React projects.
 
-    /* example: @config "../tailwind.config.js" #for vite react */
-    /* or use link to index if use simple React base 
-    <script  src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
-    (this maybe difference, should check on tailwindcss official website) */
-    ```
-    ---
-    Add needed packages to your `tailwind.config.js` file:
-    ```ts
-    {
-    content: ["./node_modules/tkeditor/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-    // ...
-    },
-    variants: {
-    // ...
-    },
-    plugins: [],
-    };
+## Install 📦
 
-    ```
+Install `tkeditor` and the necessary peer dependencies:
 
-## `TKEditor` Component Props
+```bash
+npm install tkeditor clsx react react-dom
+# hoặc
+yarn add tkeditor clsx react react-dom
+```
+Here is the English translation:
 
-The main editor component, `TKEditor` (defined in `components/editor/plate-editor.tsx`), can be customized using the following props:
+`You also need to install Tailwind CSS in your project if you haven't already. TKEditor is designed to work best with Tailwind CSS.`
 
-| Prop              | Type                                                  | Default                                  | Description                                                                                                |
-| ----------------- | ----------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `isToolbar`       | `boolean`                                             | `true`                                   | Enables or disables the fixed toolbar.                                                                     |
-| `isFloating`      | `boolean`                                             | `true`                                   | Enables or disables the floating toolbar.                                                                  |
-| `isSettingDialog` | `boolean`                                             | `true`                                   | Enables or disables the settings dialog (for API keys, AI model).                                          |
-| `allowPlugins`    | `PLUGIN_KEY[]`                                        | `PLUGIN_DEFAULTS` (all enabled plugins)  | An array of plugin keys to specify which toolbar buttons/features are enabled. See `PLUGIN_KEY` type in `components/editor/use-create-editor.ts`. |
-| `toolbarClasses`  | `{ className?: string; groupClass?: string }`         | `{}`                                     | Custom CSS classes for the fixed toolbar container and its groups.                                         |
-| `floatingClasses` | `{ className?: string; groupClass?: string }`         | `{}`                                     | Custom CSS classes for the floating toolbar container and its groups (passed via `useCreateEditor`).       |
-| `placeholder`     | `string`                                              | `undefined`                              | Placeholder text for the editor.                                                                           |
-| `variant`         | `string`                                              | `undefined`                              | Specifies the visual variant of the editor (e.g., 'comment', 'aiChat'). See `components/ui/editor.tsx`.    |
-| `readOnly`        | `boolean`                                             | `false`                                  | Sets the editor to read-only mode.                                                                         |
-| `value`           | `MyValue` (Plate.js editor value)                     | `[]` (empty document)                    | The initial content of the editor.                                                                         |
-| `onChange`        | `(newValue: MyValue) => void`                         | `undefined`                              | Callback function triggered when the editor content changes.                                               |
-| `className`       | `string`                                              | `""`                                     | Custom CSS classes for the main editor wrapper.                                                            |
-| `ref`             | `React.Ref<HTMLDivElement>`                           | `undefined`                              | A React ref to the underlying editor div element.                                                          |
-| `components`      | `Record<string, any>`                                 | (Editor default components)              | Allows overriding default Plate.js components for rendering elements and leaves.                           |
-| `override`        | `Record<string, any>`                                 | `{}`                                     | Allows overriding other editor settings.                                                                   |
-| `placeholders`    | `boolean`                                             | `undefined`                              | Enables or disables media placeholders (configured in `useCreateEditor`).                                  |
+## Usage 🛠️
+Here is a basic example of how to integrate TKEditor into your application:
 
-Refer to `components/editor/plate-editor.tsx` for the `TKEditorProps` type definition and `components/editor/use-create-editor.ts` for how these props influence the editor's setup. The `PLUGIN_KEY` type in `use-create-editor.ts` lists all available keys for the `allowPlugins` prop.
+``` typescript
+"use client"; //Use it if your project is NextJS
+import  'tkeditor/index.css'; //Maybe not but it will better when use it
 
-## Project Structure
+import { CoreEditor, EditorProvider } from  'tkeditor';
 
-The project is organized into the following main directories:
+function App() {
+  return (
+    <EditorProvider  >
+	   <CoreEditor />
+	</EditorProvider>
+  );
+}
 
--   **`app/`**: Contains the Next.js App Router pages and API routes.
-    -   `app/editor/page.tsx`: The main editor page.
-    -   `app/api/ai/command/route.ts`: API route for AI commands.
-    -   `app/api/ai/copilot/route.ts`: API route for AI copilot functionality.
-    -   `app/api/uploadthing/route.ts`: API route for Uploadthing file uploads.
--   **`components/`**: Reusable React components.
-    -   `components/editor/plate-editor.tsx`: The core `TKEditor` component.
-    -   `components/editor/plugins/`: Contains all Plate.js plugin configurations.
-    -   `components/editor/use-create-editor.ts`: Hook for creating and configuring the Plate editor instance.
-    -   `components/ui/`: UI components, many from shadcn/ui, customized for the editor.
--   **`configs/`**: Application-wide configurations.
-    -   `configs/common.ts`: Common configurations, including AI models and API keys.
--   **`hooks/`**: Custom React hooks.
-    -   `hooks/use-upload-file.ts`: Hook for managing file uploads with Uploadthing.
-    -   `hooks/use-chat.ts`: Hook for AI chat interactions.
--   **`lib/`**: Utility functions and libraries.
-    -   `lib/uploadthing.ts`: Uploadthing configuration.
-    -   `lib/utils.ts`: General utility functions (likely includes `cn` for Tailwind class merging).
--   **`plugins/`**: (If present, might contain custom Plate.js plugins not fitting elsewhere)
--   **`public/`**: Static assets.
+export default App;
+```
+
+``` css
+/* use it when u use Tailwindcss v4 (same like `content: [...]` in tailwind.config.js/ts of tailwindcss v3)*/
+@source  "../../node_modules/tkeditor";
+```
+****Structure app (structure folder appply for NextJS)****
+```bash
+#structure
+
+~project
+
+├── src
+│ ├── app
+│ │ ├── api
+│ │ │ ├── ai
+│ │ │ │ ├── command
+│ │ │ │ │ └── route.ts
+│ │ │ │ └── copilot
+│ │ │ │ └── route.ts
+│ │ │ └── uploadthing
+│ │ │ └── route.ts
+		...
+
+```
+****AI content routes****
+```ts
+-  `/api/ai/command` - AI command API route.
+-  `/api/ai/copilot` - AI copilot API route.
+-  `/api/uploadthing` - Uploadthing API route to file uploads.
+```
+```
+
+```env
+OPENAI_API_KEY=<your_open_api_key_here>
+UPLOADTHING_TOKEN=<your_uploadthing_token_here>
+WEBSITE_URL=<your_website_url>
+```
+<i>if you are useing NextJS `your_website_url` is your web host url (cuz this is the host to use call AI Content)</i>
+<i>if you are useing base React `your_website_url`  may be your <strong>Backend </strong>host url  to use call AI Content)</i>
+
+[Get Open Api Key here](https://platform.openai.com/account/api-keys)
+[Get Uploadthing Token here](https://uploadthing.com/dashboard)
+
+## Props
+
+#### `CoreEditor` Props
+| Prop                   | Type          | Required | Description    |
+| ---------------------- | ------------- | -------- | ------------------------------------------------- |
+| `editorRef`            | `React.Ref<HTMLDivElement>`   | ✖️       | Reference to the editor container DOM node.       |
+| `variant`              | `"default" | "select" | "none" | "comment" | "demo" | "ai" | "aiChat" | "fullWidth"` | ✖️       | Determines the visual style of the editor.        |
+| `focused`              | `boolean`                                                                            | ✖️       | Indicates if the editor is currently focused.     |
+| `disabled`             | `boolean`                                                                            | ✖️       | Disables editing capabilities when set to `true`. |
+| `className`            | `string`                                                                             | ✖️       | Custom CSS class for the editor container.        |
+| `...PlateContentProps` | [PlateContentProps](https://platejs.org/docs/api/plate-content#props)                | ✖️       | Props passed to the Plate content component.      |
+
+#### `EditorProvider` Props
+| Prop             | Type                                          | Required | Description                                 |
+| ---------------- | --------------------------------------------- | -------- | ------------------------------------------- |
+| `children`       | `React.ReactNode`                             | ✅        | Editor children components.                 |
+| `isToolbar`      | `boolean`                                     | ✖️       | Show or hide the main toolbar.              |
+| `isFloating`     | `boolean`                                     | ✖️       | Enable floating toolbar behavior.           |
+| `allowPlugins`   | `PLUGIN_KEY[]`                                | ✖️       | List of allowed plugins (see below).        |
+| `toolbarClasses` | `{ className?: string; groupClass?: string }` | ✖️       | Classes for styling the toolbar and groups. |
+
+#### Available Plugin Keys (`PLUGIN_KEY`)
+`"undo" | "redo" | "ai" | "export" | "import" | "insert" | "turn_into" | "font_size" |
+"bold" | "italic" | "underline" | "strikethrough" | "code" | "font_color" |
+"background_color" | "align" | "indent_list" | "bulleted_list" | "indent_todo" |
+"toggle" | "link" | "table" | "emoji" | "image" | "video" | "audio" | "file" |
+"line_height" | "outdent" | "indent" | "more" | "highlight" | "comment" |
+"mode" | "equation" | "suggestion"`
+#### `useCreateEditor` Options
+| Prop                | Type      | Required | Description                                   |
+| ------------------- | ----------- | -------- | --------------------------------------------- |
+| `isFixedToolbar`    | `boolean`                                                                          | ✖️       | Enables a fixed (non-scrolling) toolbar.      |
+| `isFloatingToolbar` | `boolean`                                                                          | ✖️       | Enables a floating toolbar on text selection. |
+| `allowPlugins`      | `PLUGIN_KEY[]`                                                                     | ✖️       | Limit editor features by allowed plugin keys. |
+| `toolbarClasses`    | `{ className?: string; groupClass?: string }`                                      | ✖️       | Customize classes for fixed toolbar.          |
+| `floatingClasses`   | `{ className?: string; groupClass?: string }`                                      | ✖️       | Customize classes for floating toolbar.       |
+| `components`        | `Record<string, any>`                                                              | ✖️       | Override or extend default UI components.     |
+| `placeholders`      | `boolean`                                                                          | ✖️       | Enable placeholder behavior.                  |
+| `readOnly`          | `boolean`                                                                          | ✖️       | Set editor to read-only mode.                 |
+| `...options`        | [`CreatePlateEditorOptions`](https://platejs.org/docs/api/plate#createplateeditor) | ✖️       | Additional editor configuration.              |
 
 
-## Key Technologies
+## Contributing 🤝
+We welcome all contributions! If you would like to contribute to TKEditor, please:
 
--   [Next.js](https://nextjs.org/) (React Framework)
--   [Plate.js](https://platejs.org/) (Rich Text Editor Framework for Slate.js)
--   [Tailwind CSS](https://tailwindcss.com/) (Utility-first CSS Framework)
--   [shadcn/ui](https://ui.shadcn.com/) (UI Components)
--   [Uploadthing](https://uploadthing.com/) (File Upload Service)
--   [Vercel AI SDK](https://sdk.vercel.ai/) (For AI interactions)
--   [Lucide React](https://lucide.dev/) (Icons)
--   TypeScript
+* **Fork** this repository.
+* Create a new **branch** for your feature or bug fix `git checkout -b feature/amazing-feature`.
+* **Commit** your changes `git commit -m 'Add some amazing feature'`.
+* **Push** to your branch `git push origin feature/amazing-feature`.
+* Open a **Pull Request**.
+* Please ensure that your code adheres to the standards and includes necessary tests. You can report bugs or request new features on [GitHub Issues](https://github.com/datnt19213/tkeditor/issues).
 
-## Future Enhancements (Potential)
+## License 📄
+TKEditor is released under the [MIT License](https://github.com/datnt19213/tkeditor/blob/main/LICENSE).
 
--   Real-time collaboration features.
--   More advanced AI tools and integrations.
--   Version history for documents.
--   Expanded export/import options.
--   Mobile responsiveness improvements.
-
----
-
-This README provides an overview of the pakage, its structure, and its key technologies. For detailed usage instructions, refer to the package's documentation.
-
-
-----------
-
-## 🤝 License
-
-MIT – free to use, modify, and extend.
+Thank you for using TKEditor! We hope it helps you build great editing experiences. 🎉

@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import { IS_APPLE } from '@udecode/plate';

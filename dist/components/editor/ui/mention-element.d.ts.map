@@ -1,1 +1,0 @@
-{"version":3,"file":"mention-element.d.ts","sourceRoot":"","sources":["../../../../src/components/editor/ui/mention-element.tsx"],"names":[],"mappings":"AAKA,OAAO,KAAK,EAAE,eAAe,EAAE,MAAM,wBAAwB,CAAC;AAC9D,OAAO,KAAK,EAAE,iBAAiB,EAAE,MAAM,sBAAsB,CAAC;AAY9D,wBAAgB,cAAc,CAC5B,KAAK,EAAE,iBAAiB,CAAC,eAAe,CAAC,GAAG;IAC1C,MAAM,CAAC,EAAE,MAAM,CAAC;CACjB,2CA6CF"}

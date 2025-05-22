@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import type { TMentionInputElement } from '@udecode/plate-mention';

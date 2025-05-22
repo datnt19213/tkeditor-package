@@ -47,7 +47,7 @@ export const isSelectionAtTopLevel = (editor:any): boolean => {
 };
 
 
-export const BlockWithPlus = ({children, element}: any) => {
+export const BlockWithPlus = ({ children, element}: any) => {
   const isSelected = useSelected();
   const isReadOnly = useReadOnly();
   const editor = useEditorRef();
@@ -85,6 +85,7 @@ export const BlockWithPlus = ({children, element}: any) => {
 
 	return (
 		<div
+      data-tkeclassblockkey="true"
 			className="relative group"
 
 		>

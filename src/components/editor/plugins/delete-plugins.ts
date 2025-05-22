@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { HorizontalRulePlugin } from '@udecode/plate-horizontal-rule/react';
 import {

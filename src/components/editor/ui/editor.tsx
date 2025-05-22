@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 
 import type { VariantProps } from 'class-variance-authority';
@@ -97,10 +95,11 @@ export type EditorProps = PlateContentProps &
   VariantProps<typeof editorVariants>;
 
 export const Editor:any = React.forwardRef<HTMLDivElement, EditorProps>(
-  ({ className, disabled, focused, variant, ...props }, ref) => {
+  ({ className ="", disabled, focused, variant, ...props }, ref) => {
     return (
       <PlateContent
         ref={ref}
+        content={props.content}
         className={cn(
           editorVariants({
             disabled,

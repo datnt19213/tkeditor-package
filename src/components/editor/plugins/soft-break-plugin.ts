@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { BlockquotePlugin } from '@udecode/plate-block-quote/react';
 import { SoftBreakPlugin } from '@udecode/plate-break/react';

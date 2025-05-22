@@ -1,4 +1,4 @@
-'use client';
+;
 
 import { TablePlugin } from '@udecode/plate-table/react';
 
