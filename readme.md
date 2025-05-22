@@ -11,7 +11,7 @@ TKEditor is a powerful and extensible rich text editor built with Next.js, Plate
 # TKEditor 📝✨
 
 [![NPM Version](https://img.shields.io/npm/v/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
-[![License](https://img.shields.io/npm/l/tkeditor.svg)](https://github.com/datnt19213/tkeditor/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/tkeditor.svg)](https://github.com/datnt19213/tkeditor-package/blob/main/LICENSE)
 [![NPM Downloads](https://img.shields.io/npm/dm/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
 
 TKEditor is a powerful and scalable feature-rich text editor (rich text editor), built with React, Plate.js, and a modern tech stack. It provides a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
@@ -188,6 +188,6 @@ We welcome all contributions! If you would like to contribute to TKEditor, pleas
 * Please ensure that your code adheres to the standards and includes necessary tests. You can report bugs or request new features on [GitHub Issues](https://github.com/datnt19213/tkeditor/issues).
 
 ## License 📄
-TKEditor is released under the [MIT License](https://github.com/datnt19213/tkeditor/blob/main/LICENSE).
+TKEditor is released under the [MIT License](https://github.com/datnt19213/tkeditor-package/blob/main/LICENSE).
 
 Thank you for using TKEditor! We hope it helps you build great editing experiences. 🎉
