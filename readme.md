@@ -123,7 +123,6 @@ export default App;
 -  `/api/ai/copilot` - AI copilot API route.
 -  `/api/uploadthing` - Uploadthing API route to file uploads.
 ```
-```
 
 ```env
 OPENAI_API_KEY=<your_open_api_key_here>
@@ -133,7 +132,8 @@ WEBSITE_URL=<your_website_url>
 <i>if you are useing NextJS `your_website_url` is your web host url (cuz this is the host to use call AI Content)</i><br>
 <i>if you are useing base React `your_website_url`  may be your <strong>Backend </strong>host url  to use call AI Content)</i>
 
-[Get Open Api Key here](https://platform.openai.com/account/api-keys) | [Get Uploadthing Token here](https://uploadthing.com/dashboard)
+[Get Open Api Key here](https://platform.openai.com/account/api-keys)
+[Get Uploadthing Token here](https://uploadthing.com/dashboard)
 
 ## Props
 
