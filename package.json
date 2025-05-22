@@ -1,7 +1,7 @@
 {
 	"name": "tkeditor",
 	"description": "TKEditor is a powerful and extensible rich text editor built with React, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.",
-	"version": "2.0.35",
+	"version": "2.0.36",
 	"license": "MIT",
 	"publisher": "kumodefe",
 	"author": "kumodefe",
