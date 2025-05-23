@@ -3,7 +3,7 @@
 
 TKEditor is a powerful and extensible rich text editor built with Next.js, Plate.js, and a suite of modern technologies. It offers a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
 
-<p align="center"><img src="https://lh6.googleusercontent.com/xy_by-BpYf7wKgAJWuMxEGAUFQ2Lo6xX7K4TW1l4jMbblXPuyih9AeKxks350ydbJrSxmw_EP3UgMa2sjKEuaF8IZDT0CB3wbSX-u-Ty4Oaslb3NF03x7Iouwc9Lsoq3MQ=w1280" width='320px' /></>
+<p align="center"><a data-flickr-embed="true" href="https://www.flickr.com/photos/202866953@N04/54538881909/in/dateposted-public/" title="TKEditor NPM Package Logo"><img src="https://live.staticflickr.com/65535/54538881909_1feb28856a_n.jpg" width="320" height="320" alt="TKEditor NPM Package Logo"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></>
 
 <p align="center"><a href="https://tkeditor-demo.vercel.app/"><strong>Demo</strong></a></p>
 
@@ -11,7 +11,7 @@ TKEditor is a powerful and extensible rich text editor built with Next.js, Plate
 # TKEditor 📝✨
 
 [![NPM Version](https://img.shields.io/npm/v/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
-[![License](https://img.shields.io/npm/l/tkeditor.svg)](https://github.com/datnt19213/tkeditor-package/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/tkeditor.svg)](https://github.com/datnt19213/tkeditor-package/blob/main/LICENCE)
 [![NPM Downloads](https://img.shields.io/npm/dm/tkeditor.svg)](https://www.npmjs.com/package/tkeditor)
 
 TKEditor is a powerful and scalable feature-rich text editor (rich text editor), built with React, Plate.js, and a modern tech stack. It provides a comprehensive editing experience with AI-powered features, seamless file uploads, and a highly customizable plugin-based architecture.
@@ -70,7 +70,6 @@ npm install tkeditor clsx react react-dom
 # hoặc
 yarn add tkeditor clsx react react-dom
 ```
-Here is the English translation:
 
 `You also need to install Tailwind CSS in your project if you haven't already. TKEditor is designed to work best with Tailwind CSS.`
 
@@ -132,8 +131,8 @@ WEBSITE_URL=<your_website_url>
 <i>if you are useing NextJS `your_website_url` is your web host url (cuz this is the host to use call AI Content)</i><br>
 <i>if you are useing base React `your_website_url`  may be your <strong>Backend </strong>host url  to use call AI Content)</i>
 
-[Get Open Api Key here](https://platform.openai.com/account/api-keys)
-[Get Uploadthing Token here](https://uploadthing.com/dashboard)
+- [Get Open Api Key here](https://platform.openai.com/account/api-keys)
+- [Get Uploadthing Token here](https://uploadthing.com/dashboard)
 
 ## Props
 
@@ -188,6 +187,6 @@ We welcome all contributions! If you would like to contribute to TKEditor, pleas
 * Please ensure that your code adheres to the standards and includes necessary tests. You can report bugs or request new features on [GitHub Issues](https://github.com/datnt19213/tkeditor/issues).
 
 ## License 📄
-TKEditor is released under the [MIT License](https://github.com/datnt19213/tkeditor-package/blob/main/LICENSE).
+TKEditor is released under the [MIT License](https://github.com/datnt19213/tkeditor-package/blob/main/LICENCE).
 
 Thank you for using TKEditor! We hope it helps you build great editing experiences. 🎉
