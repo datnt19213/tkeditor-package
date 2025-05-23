@@ -67,7 +67,7 @@ Install `tkeditor` and the necessary peer dependencies:
 
 ```bash
 npm install tkeditor clsx react react-dom
-# hoặc
+# or
 yarn add tkeditor clsx react react-dom
 ```
 
