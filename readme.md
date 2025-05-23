@@ -411,6 +411,151 @@ import { ourFileRouter } from '@/lib/uploadthing';
 export const { GET, POST } = createRouteHandler({ router: ourFileRouter });
 ```
 
+## API Context & Hooks
+
+ *API Context & Hooks:* A simple and reusable API context solution using React Context, Axios, and custom hooks for managing API interactions in your app.
+
+*Features:*
+
+> -   Centralized API configuration using React Context
+>     
+> -   Custom hook to fetch data: `useApi`
+>     
+> -   Custom hook to mutate data (POST/PUT/DELETE): `useApiMutation`
+
+##### Define Your API Provider
+
+```tsx
+import { ApiProvider } from './apiProvider';
+
+const apiConfig = {
+  host: 'https://your-api-host.com',
+  resources: {
+    users: '/users',
+    posts: '/posts',
+    // add more resources here
+  },
+};
+
+function App() {
+  return (
+    <ApiProvider host={apiConfig.host} resources={apiConfig.resources}>
+      <YourAppComponents />
+    </ApiProvider>
+  );
+}
+
+```
+
+----------
+
+## 📡 `useApi` – Fetch Data
+
+Fetches data from the API based on the resource key and optional query parameters.
+
+```tsx
+import { useApi } from './hooks/useApi';
+
+const UserList = () => {
+  const { data, loading, error } = useApi('users', { page: 1 });
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error loading users</p>;
+
+  return (
+    <ul>
+      {data?.map((user: any) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
+};
+
+```
+
+##### Parameters:
+
+-   `resourceKey` – key defined in `resources` (e.g., `'users'`)
+    
+-   `params` – query parameters (optional)
+    
+-   `options.skip` – set `true` to skip fetching initially
+    
+
+----------
+
+## ✏️ `useApiMutation` – Mutate Data (POST/PUT/DELETE)
+
+Handles data mutation (e.g., submitting a form or deleting a record).
+
+```tsx
+import { useApiMutation } from './hooks/useApiMutation';
+
+const CreateUser = () => {
+  const { mutate, loading, error, data } = useApiMutation('users', {
+    method: 'POST',
+    onSuccess: () => alert('User created!'),
+    onError: (err) => console.error(err),
+  });
+
+  const handleSubmit = () => {
+    mutate({ name: 'John Doe', email: 'john@example.com' });
+  };
+
+  return (
+    <div>
+      <button onClick={handleSubmit} disabled={loading}>
+        Create User
+      </button>
+      {error && <p>Error creating user</p>}
+    </div>
+  );
+};
+
+```
+
+##### Parameters:
+
+-   `resourceKey` – key defined in `resources` (e.g., `'users'`)
+    
+-   `options.method` – HTTP method (default is `'POST'`)
+    
+-   `options.onSuccess` – callback on successful response
+    
+-   `options.onError` – callback on error
+    
+
+----------
+
+##### 🧠 Accessing Context Directly
+
+If needed, access the context manually with:
+
+```tsx
+import { useApiContext } from './apiProvider';
+
+const Component = () => {
+  const { host, resources } = useApiContext();
+  console.log(host, resources);
+};
+
+```
+
+----------
+
+##### ⚠️ Error Handling
+
+Both `useApi` and `useApiMutation` expose `error` which you can use to display or log errors.
+
+```
+~project/
+  ├─ src
+    ├─ api
+      ├─ apiProvider.ts
+      ├─ useApi.ts
+      └─ useApiMutation.ts
+```
+
 ## Props of TKEditor
 
 #### `CoreEditor` Props
